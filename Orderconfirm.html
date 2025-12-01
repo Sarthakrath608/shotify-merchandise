@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WLFQ08944V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WLFQ08944V');
+</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M8BRHMRT');</script>
+    <!-- End Google Tag Manager -->
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - Shotify Merchandise</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .confirmation-container {
+            background: white;
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            max-width: 700px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: fadeInScale 0.6s ease;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .success-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: bounceIn 0.8s ease;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .success-icon::before {
+            content: '✓';
+            color: white;
+            font-size: 4rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+            animation: fadeIn 0.8s ease 0.2s backwards;
+        }
+
+        .order-number {
+            font-size: 1.2rem;
+            color: #764ba2;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            animation: fadeIn 0.8s ease 0.3s backwards;
+        }
+
+        .message {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.8s ease 0.4s backwards;
+        }
+
+        .order-details {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            text-align: left;
+            animation: fadeIn 0.8s ease 0.5s backwards;
+        }
+
+        .order-details h3 {
+            color: #667eea;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+        .detail-label {
+            color: #666;
+            font-weight: 500;
+        }
+
+        .detail-value {
+            color: #333;
+            font-weight: 600;
+        }
+
+        .total-row {
+            font-size: 1.2rem;
+            padding-top: 1rem;
+            margin-top: 1rem;
+            border-top: 2px solid #667eea;
+        }
+
+        .total-row .detail-value {
+            color: #667eea;
+            font-size: 1.4rem;
+        }
+
+        .info-boxes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 0.8s ease 0.6s backwards;
+        }
+
+        .info-box {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .info-box-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-box h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .info-box p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeIn 0.8s ease 0.7s backwards;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .email-notice {
+            background: #e8f4f8;
+            padding: 1rem;
+            border-radius: 10px;
+            color: #0984e3;
+            font-size: 0.95rem;
+            margin-top: 2rem;
+            animation: fadeIn 0.8s ease 0.8s backwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .confirmation-container {
+                padding: 3rem 2rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .info-boxes {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M8BRHMRT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="confirmation-container">
+        <div class="success-icon"></div>
+        
+        <h1>Order Confirmed!</h1>
+        <div class="order-number">Order #<span id="orderNumber"></span></div>
+        
+        <p class="message">
+            <strong>Thank you for your purchase!</strong><br>
+            Your order has been successfully placed and is being processed. 
+            We'll send you a confirmation email shortly with tracking details.
+        </p>
+
+        <div class="order-details">
+            <h3>Order Summary</h3>
+            <div class="detail-row">
+                <span class="detail-label">Order Date:</span>
+                <span class="detail-value" id="orderDate"></span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Payment Method:</span>
+                <span class="detail-value">Credit Card (****1234)</span>
+            </div>
+            <div class="detail-row">
+                <span class="detail-label">Shipping Method:</span>
+                <span class="detail-value">Standard Shipping (5-7 days)</span>
+            </div>
+            <div class="detail-row total-row">
+                <span class="detail-label">Total Amount:</span>
+                <span class="detail-value" id="totalAmount"></span>
+            </div>
+        </div>
+
+        <div class="info-boxes">
+            <div class="info-box">
+                <div class="info-box-icon">📦</div>
+                <h4>Estimated Delivery</h4>
+                <p id="deliveryDate"></p>
+            </div>
+            <div class="info-box">
+                <div class="info-box-icon">📧</div>
+                <h4>Order Updates</h4>
+                <p>Check your email for tracking</p>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <a href="merchandise.html" class="btn btn-primary">Continue Shopping</a>
+            <a href="index.html" class="btn btn-secondary">Back to Home</a>
+        </div>
+
+        <div class="email-notice">
+            💡 Tip: Add orders@shotify.com to your contacts to ensure you receive all updates
+        </div>
+    </div>
+
+    <script>
+        // Generate random order number
+        const orderNumber = 'SHT' + Math.floor(100000 + Math.random() * 900000);
+        document.getElementById('orderNumber').textContent = orderNumber;
+
+        // Set order date
+        const today = new Date();
+        document.getElementById('orderDate').textContent = today.toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+
+        // Set delivery date (7 days from now)
+        const deliveryDate = new Date(today);
+        deliveryDate.setDate(deliveryDate.getDate() + 7);
+        document.getElementById('deliveryDate').textContent = deliveryDate.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+        });
+
+        // Get total from localStorage
+        const total = localStorage.getItem('checkoutTotal') || '$0.00';
+        document.getElementById('totalAmount').textContent = total;
+
+        // Clear cart after successful order
+        localStorage.removeItem('shotifyCart');
+        localStorage.removeItem('checkoutTotal');
+
+        // GTM Purchase Event
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'purchase',
+            'order_id': orderNumber,
+            'order_total': total,
+            'order_date': today.toISOString()
+        });
+
+        // GTM Page View
+        window.dataLayer.push({
+            'event': 'page_view',
+            'page_title': 'Order Confirmation',
+            'order_number': orderNumber
+        });
+    </script>
+</body>
+</html>
